@@ -1,0 +1,22 @@
+{
+  "name": "goldnead/statamic-component",
+  "autoload": {
+    "psr-4": {
+      "Goldnead\\StatamicComponent\\": "src"
+    },
+    "files": [
+      "src/helpers.php"
+    ]
+  },
+  "extra": {
+    "statamic": {
+      "name": "Statamic Component",
+      "description": "Statamic Component addon"
+    },
+    "laravel": {
+      "providers": [
+        "Goldnead\\StatamicComponent\\ServiceProvider"
+      ]
+    }
+  }
+}
