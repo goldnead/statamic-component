@@ -83,7 +83,7 @@ Fieldset types are a way to use fieldsets danymically like you would inside of a
 
 ```antlers
 {{ article }}
-  {{ component src="\{type\}" }}
+  {{ component :src="type" }}
 {{ /article }}
 ```
 
