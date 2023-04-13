@@ -101,7 +101,7 @@ class ComponentRepository
             return [];
         }
 
-        return $this->find($componentName)->getSupportedTypes();
+        return $this->find($componentName)->getfieldsetTypes();
     }
 
     /**
@@ -133,7 +133,7 @@ class ComponentRepository
     public function findComponentByType(string $type): ?Component
     {
         $component = collect($this->components)->first(function ($component) use ($type) {
-            $types = $this->isAssoc($component->getSupportedTypes()) ? array_keys($component->getSupportedTypes()) : $component->getSupportedTypes();
+            $types = $this->isAssoc($component->getfieldsetTypes()) ? array_keys($component->getfieldsetTypes()) : $component->getfieldsetTypes();
 
             return in_array($type, $types);
         });

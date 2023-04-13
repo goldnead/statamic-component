@@ -9,7 +9,7 @@ use Statamic\Support\Str;
 
 class Component
 {
-    public $supportedTypes = [];
+    public $fieldsetTypes = [];
 
     private $name;
 
@@ -48,9 +48,9 @@ class Component
      * @return array An array is being returned. If the object has a set list of supported types, the
      * array will contain the set list. Otherwise, the array will contain the default types.
      */
-    public function getSupportedTypes(): array
+    public function getfieldsetTypes(): array
     {
-        return ! empty($this->supportedTypes) ? $this->supportedTypes : $this->getDefaultTypes();
+        return ! empty($this->fieldsetTypes) ? $this->fieldsetTypes : $this->getDefaultTypes();
     }
 
     /**
@@ -81,8 +81,8 @@ class Component
      */
     public function viewName($type = null): string
     {
-        if (Arr::isAssoc($this->getSupportedTypes())) {
-            $type = $this->getSupportedTypes()[$type];
+        if (Arr::isAssoc($this->getfieldsetTypes())) {
+            $type = $this->getfieldsetTypes()[$type];
         }
 
         $type = $type ?? $this->getDefaultTypes()[0];
