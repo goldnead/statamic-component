@@ -1,6 +1,6 @@
 # Statamic Component
 
-> Statamic-Component is an addon to simplify the creation of components in Statamic.
+> Statamic-Component is an addon to simplify the creation of separated components in Statamic that combines a bunch of logic like fieldsets & views.
 
 This is for developers who love things DRY. The folder structure in Statamic is usually pretty simple to understand, but as soon
 a project grows, it can become a bit of a mess. With this addon you are able to group your component files into a single folder.
